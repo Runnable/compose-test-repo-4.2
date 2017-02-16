@@ -15,7 +15,7 @@ http.createServer(function (req, res) {
   if (process.env.NAME) {
     opts.NAME = process.env.NAME
   }
-  res.writeHead(200, {'Content-Type': 'text/plain'})
+  res.writeHead(200, {'Content-Type': 'application/json'})
   if (!process.env.RETHINKDB) {
     console.log('No `RETHINKDB` ENV vars set')
     res.end(j({
